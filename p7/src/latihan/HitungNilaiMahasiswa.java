@@ -36,7 +36,6 @@ public class HitungNilaiMahasiswa {
             }
         } else if (nilaiAkhir >= 55) {
             System.out.println("Nilai anda : " + nilaiAkhir + " Grade D");
-            System.out.println("Grade B");
         } else if (nilaiAkhir < 55) {
             System.out.println("Nilai anda : " + nilaiAkhir + " Grade E");
         }

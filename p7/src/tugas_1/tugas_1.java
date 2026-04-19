@@ -5,24 +5,32 @@ public class tugas_1 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int  NilaiUTS, NilaiTugas, NilaiUAS;
-        double RealisasiPresensi, Presensi;
+        double  NilaiUTS, NilaiTugas, NilaiUAS;
+        double Presensi;
+        int RealisasiPresensi;
         System.out.println("Masukkan Realisasi Presensi : ");
-        RealisasiPresensi = input.nextDouble();
+        RealisasiPresensi = input.nextInt();
         System.out.println("Masukkan Presensi : ");
         Presensi = input.nextDouble();
         System.out.println("Masukkan Nilai UTS : ");
-        NilaiUTS = input.nextInt();
+        NilaiUTS = input.nextDouble();
         System.out.println("Masukkan Nilai Tugas : ");
-        NilaiTugas = input.nextInt();
+        NilaiTugas = input.nextDouble();
         System.out.println("Masukkan Nilai UAS : ");
-        NilaiUAS = input.nextInt();
+        NilaiUAS = input.nextDouble();
         double BatasPresensi = 75;
         double PresensiAkhir = Presensi/RealisasiPresensi*100;
-        int TotalUTS = NilaiUTS*30/100;
-        int TotalTugas = NilaiTugas*20/100;
-        int TotalUAS = NilaiUAS*40/100;
-        double TotalNilai = TotalUTS + TotalTugas + TotalUAS + PresensiAkhir;
+        double TotalPresensi = PresensiAkhir*0.1;
+        double TotalUTS = NilaiUTS*0.30;
+        double TotalTugas = NilaiTugas*0.20;
+        double TotalUAS = NilaiUAS*0.40;
+        double TotalNilai = TotalUTS + TotalTugas + TotalUAS + TotalPresensi;
+        System.out.println("Realisasi Presensi : " + RealisasiPresensi);
+        System.out.println("Presensi : " + PresensiAkhir + " %");
+        System.out.println("Presensi : " + TotalPresensi);
+        System.out.println("Nilai UTS : " + TotalUTS);
+        System.out.println("Nilai Tugas : " + TotalTugas);
+        System.out.println("Nilai UAS : " + TotalUAS);
         System.out.println("Total Presensi : " + PresensiAkhir + " %");
         System.out.println("Total Nilai : " + TotalNilai);
 
@@ -42,7 +50,6 @@ public class tugas_1 {
             }
         } else if (TotalNilai >= 55) {
             System.out.println("Nilai anda : " + TotalNilai + " Grade D");
-            System.out.println("Grade B");
         } else if (TotalNilai < 55) {
             System.out.println("Nilai anda : " + TotalNilai  + " Grade E");
         }
